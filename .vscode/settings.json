@@ -1,0 +1,58 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[ts,tsx,js,jsx]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.sortConfiguration.joinImportPaths": true,
+  "importSorter.importStringConfiguration.hasSemicolon": false,
+  "importSorter.sortConfiguration.customOrderingRules.rules": [
+    {
+      "type": "importMember",
+      "regex": "^$",
+      "orderLevel": 10,
+      "disableSort": true
+    },
+    {
+      "regex": "^[@]/types/",
+      "orderLevel": 30
+    },
+    {
+      "regex": "^[@]/services/",
+      "orderLevel": 40
+    },
+    {
+      "regex": "^[@]/utils/",
+      "orderLevel": 50
+    },
+    {
+      "regex": "^[@]/components/",
+      "orderLevel": 60
+    },
+    {
+      "regex": "^[@]/icons/",
+      "orderLevel": 60
+    },
+    {
+      "regex": "^[@]/assets/",
+      "orderLevel": 70
+    },
+    {
+      "regex": "^[@]/styles/",
+      "orderLevel": 80
+    },
+    {
+      "regex": "^[.]",
+      "orderLevel": 80
+    }
+  ]
+}
